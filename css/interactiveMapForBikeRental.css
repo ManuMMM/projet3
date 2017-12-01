@@ -1,0 +1,148 @@
+/*----------------------------------------------------------------
+----------- Global properties ------------------------------------
+----------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    text-align: center;
+}
+
+.clearfix::after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+/*----------------------------------------------------------------
+---------- Header properties -------------------------------------
+----------------------------------------------------------------*/
+
+header {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*----------------------------------------------------------------
+---------- Slider properties -------------------------------------
+----------------------------------------------------------------*/
+
+.slider {
+    display: flex;
+    min-height: 100vh;
+}
+
+.slides {
+    display: none;
+    flex: 1 0 100vw;
+    padding: 10vw;
+}
+
+.slides p {
+    margin: 0;
+}
+
+.slides .container-slide-images {
+    min-height: 40vh;
+    position: relative;
+}
+
+.slides .explanation {
+    min-height: 30vh;
+}
+
+.slide-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.controls {
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.button {}
+
+.button-previous {
+    float: left;
+}
+
+.button-next {
+    float: right;
+}
+
+#slide-image1, #slide-image2, #slide-image3, #slide-image4, #slide-image5 {
+    margin:0;
+    padding:0;
+    width: 80vw;
+    height: 40vh; 
+}
+
+#slide-image1 {
+    background-image:  url(../images/parisbynight.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid #fab526;
+    border-radius: 50%;
+}
+
+#slide-image2 {
+    background-image: url(../images/diapo-test.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#slide-image3 {
+    background-image: url(../images/diapo-test.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#slide-image4 {
+    background-image: url(../images/diapo-test.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#slide-image5 {
+    background-image: url(../images/diapo-test.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*----------------------------------------------------------------
+---------- Map properties ----------------------------------------
+----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
+---------- Footer properties -------------------------------------
+----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
+---------- Media Queries -----------------------------------------
+----------------------------------------------------------------*/
