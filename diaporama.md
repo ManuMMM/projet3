@@ -1,6 +1,6 @@
 # Diaporama
 
-Il sera composé de 6 slides:
+Il sera composé de 5 slides:
 
 * Slide de bienvenue | Vue de Paris | Mise en relief des touches previous/next
 * Slide de présentation | Selectionner une station (et vérifier si elle est active)
