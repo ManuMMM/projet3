@@ -52,7 +52,10 @@
                     <p class="explanation">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse odio iste deserunt, expedita culpa fugit delectus, vel quibusdam fuga. Maxime corrupti autem id sit sapiente facere qui accusamus, iste, magni enim beatae esse inventore saepe commodi officia ex laborum. Aliquam est perspiciatis, unde doloribus aspernatur deleniti soluta itaque. Maxime, eius.</p>
                 </div>
             </section>
-            <section class="map"></section>
+            <section class="container-map">
+                <div class="map" id="map"></div>
+                <aside class="station-information"></aside>
+            </section>
         </main>
         <footer class="footer">
             <section class="privacy"></section>
@@ -61,9 +64,10 @@
     </div>
     <!--  End body of the page  -->
 
-<!--    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvSlcOb8IowEcC0XKLbq99-VvT_fQRf5A&callback=initMap"></script>-->
-    <script src="js/ajax.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvSlcOb8IowEcC0XKLbq99-VvT_fQRf5A&callback=initMap"></script>
+    <script src="js/ajax.js"></script>
     <script src="js/interactiveMapForBikeRental.js"></script>
 </body>
 

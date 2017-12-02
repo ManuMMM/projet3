@@ -35,7 +35,7 @@ h6 {
 ----------------------------------------------------------------*/
 
 header {
-    position: fixed;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -138,6 +138,27 @@ header {
 /*----------------------------------------------------------------
 ---------- Map properties ----------------------------------------
 ----------------------------------------------------------------*/
+
+.container-map {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.map {
+    height: 50vh;
+    width: 80vw;
+    margin: 0 auto;
+    border: 2px solid #fab526;
+    border-radius: 5%;
+}
+
+.station-information {
+    height: 40vh;
+    width: 80vw;
+    margin: 0 auto;
+}
 
 /*----------------------------------------------------------------
 ---------- Footer properties -------------------------------------
