@@ -158,6 +158,8 @@ header {
     height: 40vh;
     width: 80vw;
     margin: 0 auto;
+    border: 2px solid #fab526;
+    border-radius: 5%;
 }
 
 /*----------------------------------------------------------------

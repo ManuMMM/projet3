@@ -5,7 +5,6 @@
 //---------------------------------------------------------------------
 
 // Add listners on the "previous" and "next" buttons
-
 var activeSlide = 1;
 
 $(".controls").on("click", ".button-next", function () {
@@ -78,7 +77,6 @@ $(".controls").on("click", ".button-previous", function () {
 
 // Initialise the map in the <div id="map"> with the given options
 var map;
-
 function initMap() {
     var mapOptions = {
         zoom: 11,
@@ -88,29 +86,34 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
 }
 
-// Get the data from the  JCDecaux Api
+// Get the data from the  JCDecaux Api and process the data obtained 
 ajaxGet("https://api.jcdecaux.com/vls/v1/stations?contract=Paris&apiKey=e35e4bf5064e9ecc9124d5f47ef2b10e50ca7e61", function (reponse) {
     // Convert the JSON in a Javascript array
     var stations = JSON.parse(reponse);
     // Create a "markers" array
     var markers = [];
+    // Create a variable with the icon "bycycle pin"
+    var image = "images/m/marker.png";
+    // ---------------------------------------------
     // For each station of the "stations" array:
     // - Create a marker on the map
     // - Add the marker to the "markers" array
-    // - 
+    // - Add listeners to the marker
+    // ---------------------------------------------    
     stations.forEach(function (station) {
         var marker = new google.maps.Marker({
             position: station.position,
             map: map,
+            icon: image,
             title: station.name
         });
         markers.push(marker);
-        marker.addListener("click", function toggleBounce() {
-            if (marker.getAnimation() !== null) {
-                marker.setAnimation(null);
-            } else {
-                marker.setAnimation(google.maps.Animation.BOUNCE);
-            }
+        marker.addListener('click', function () {
+            $("#station-name").text("Station: " + station.name);
+            $("#station-adress").text("Adresse: " + station.address);
+            $("#station-status").text();
+            $("#available-bike-stands").text("Emplacement(s) libre(s): " + station.available_bike_stands);
+            $("#available-bikes").text("Vélib disponible(s)): " + station.available_bikes);
         });
     });
     // Add a marker clusterer to manage the markers
